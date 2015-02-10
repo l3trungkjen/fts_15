@@ -9,9 +9,9 @@
     {% block javascript %}
         {{ javascript_include('js/jquery.min.js') }}
         {{ javascript_include('js/bootstrap.min.js') }}
-        {{ javascript_include('js/jquery.validate.js') }}
         {{ javascript_include('js/questions.js') }}
-        {{ javascript_include('js/func.js') }}
+        {{ javascript_include('js/examinations.js') }}
+        {{ javascript_include('js/javascript.js') }}
     {% endblock %}
 </head>
 <body>
