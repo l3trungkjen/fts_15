@@ -1,2 +1,4 @@
-/cache/
-/config/development/
+/app/cache
+/app/config
+/app/controller/ControllerBase.php
+.htaccess
