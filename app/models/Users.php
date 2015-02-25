@@ -49,6 +49,7 @@ class Users extends \Phalcon\Mvc\Model
      */
     public $status;
 
+
     const STATUS_ADMIN = 1;
     const STATUS_USER = 0;
 

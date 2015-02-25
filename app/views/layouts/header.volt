@@ -1,10 +1,10 @@
 <header class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
         <div class="container">
-            <a href="index" id="logo">Home</a>
+            {{ link_to('index', 'Home', 'id': 'Logo') }}
             <nav>
                 <ul class="nav pull-right">
-                    {% if session.has('user_id') AND session.has('email') AND session.get('status') == 2 %}
+                    {% if session.has('user_id') AND session.has('email') AND session.get('status') == 1 %}
                         <li class="dropdown">
                             <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown">
                                 Categories<b class="caret"></b>
