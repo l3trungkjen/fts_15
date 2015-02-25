@@ -1,5 +1,7 @@
 <?php
 
+use Phalcon\Mvc\Model\Relation;
+
 class Categories extends \Phalcon\Mvc\Model
 {
 
@@ -40,4 +42,27 @@ class Categories extends \Phalcon\Mvc\Model
         ];
     }
 
+    public function initialize()
+    {
+        $this->hasMany(
+            'id',
+            'Questions',
+            'category_id',
+            [
+                'foreignKey' => [
+                    'action' => Relation::ACTION_CASCADE
+                ]
+            ]
+        );
+        $this->hasMany(
+            'id',
+            'Examinations',
+            'category_id',
+            [
+                'foreignKey' => [
+                    'action' => Relation::ACTION_CASCADE
+                ]
+            ]
+        );
+    }
 }

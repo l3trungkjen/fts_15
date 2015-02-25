@@ -48,6 +48,7 @@ class Questions extends \Phalcon\Mvc\Model
                 ]
             ]
         );
+        $this->belongsTo('category_id', 'Categories', 'id');
     }
 
     public function validation()

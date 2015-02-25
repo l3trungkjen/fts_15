@@ -74,7 +74,6 @@ class QuestionsController extends \Phalcon\Mvc\Controller
         if (!empty($id)) {
             $question = Questions::findFirst($id);
             $categories = Categories::find();
-            $answers = new Answers();
             foreach ($question->answers as $key => $answer) {
                 $this->tag->setDefault("correct[". $answer->id ."]", $answer->correct);
             }
